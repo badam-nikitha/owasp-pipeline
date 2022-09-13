@@ -11,34 +11,34 @@ pipeline{
         stage('validate')
         {
             steps{
-                sh "mvn validate"
+                bat "mvn validate"
             }
             
          }
         stage('compile')
         {
             steps{
-                sh "mvn compile"
+                bat "mvn compile"
             }
             
          }
             stage('Test')
             {
                 steps{
-                    sh "mvn test"
+                    bat "mvn test"
                 }
             }
         stage('package')
         {
             steps{
-                sh "mvn package"
+                bat "mvn package"
             }
         }   
         stage('Dependency Check')
         {
             steps{
         
-                sh "mvn dependency-check:check"
+                bat "mvn dependency-check:check"
             }
         }
             
