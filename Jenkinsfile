@@ -1,5 +1,11 @@
 pipeline{
     agent any
+    tools
+    {
+       maven "Maven3.8.5"
+    }
+
+
     
     stages{
         stage('git')
